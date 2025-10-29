@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Azure Vista — Boutique Stay by the Sea</title>
+    <meta name="description" content="Hotel Azure Vista: boutique coastal hotel with cozy rooms, rooftop dining, and city-center convenience. Includes an intentionally broken link for SEO testing.">
+    <style>
+        :root {
+            --bg: #0e1320;
+            --panel: #12182a;
+            --panel-2: #0f1629;
+            --text: #e6e8ee;
+            --muted: #a9b0c3;
+            --brand: #4da3ff;
+            --accent: #7bd389;
+            --danger: #ff6b6b; /* for broken link color */
+            --ring: rgba(77,163,255,.35);
+            --shadow: 0 10px 30px rgba(0,0,0,.35);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: radial-gradient(1200px 600px at 10% 0%, #1a2240 0%, var(--bg) 50%, #0a0f1d 100%); color: var(--text); }
+        a { color: var(--brand); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+        .header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(10,15,29,.85), rgba(10,15,29,.45)); border-bottom: 1px solid rgba(255,255,255,.06); }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .3px; }
+        .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--brand), #7cc0ff); box-shadow: 0 0 0 4px var(--ring); }
+        nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .nav-links a { color: var(--muted); margin: 0 8px; padding: 8px 10px; border-radius: 8px; }
+        .nav-links a:hover { color: var(--text); background: rgba(255,255,255,.06); }
+        .hero { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 28px; padding: 48px 24px 12px; }
+        .hero-card { background: linear-gradient(180deg, var(--panel), var(--panel-2)); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 28px; box-shadow: var(--shadow); }
+        h1 { margin: 0 0 10px; font-size: 40px; line-height: 1.1; letter-spacing: .2px; }
+        .subtitle { color: var(--muted); font-size: 16px; margin: 0 0 18px; }
+        .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 10px 16px; border-radius: 10px; font-weight: 600; letter-spacing: .2px; border: 1px solid rgba(255,255,255,.1); transition: transform .08s ease; }
+        .btn:hover { transform: translateY(-1px); text-decoration: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--brand), #6bb4ff); color: #0a1020; border-color: transparent; }
+        .btn-ghost { background: rgba(255,255,255,.04); color: var(--text); }
+        .panel { background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
+        .sections { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 16px 24px 56px; }
+        .section-title { margin: 0 0 12px; font-size: 22px; }
+        .muted { color: var(--muted); }
+        .grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 14px 16px; }
+        ul { padding-left: 18px; margin: 10px 0 0; }
+        li { margin: 6px 0; }
+        .footer { text-align: center; color: var(--muted); padding: 28px 0 40px; font-size: 14px; }
+        .broken { color: var(--danger); font-weight: 600; }
+        @media (max-width: 880px) {
+            .hero { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <div class="brand"><span class="brand-dot"></span> Hotel Azure Vista</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#rooms">Rooms</a>
+                    <a href="#dining">Dining</a>
+                    <a href="#amenities">Amenities</a>
+                    <a href="#contact">Contact</a>
+                    <!-- Deliberately broken link below for SEO testing -->
+                    <a class="broken" href="/missing-page.html">Aboutt</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <section class="hero" id="home">
+            <div class="hero-card panel">
+                <h1>Seaside Boutique Comfort</h1>
+                <p class="subtitle">Wake to ocean breezes and unwind on our rooftop terrace—steps from the city center.</p>
+                <div class="cta">
+                    <a class="btn btn-primary" href="#rooms">View Rooms</a>
+                    <a class="btn btn-ghost" href="#dining">Explore Dining</a>
+                </div>
+            </div>
+            <div class="panel">
+                <p class="muted">“Azure Vista feels like a private coastal retreat—quiet mornings, golden sunsets, and a front‑row seat to the sea.”</p>
+            </div>
+        </section>
+        <section id="rooms" class="sections">
+            <div class="panel">
+                <h2 class="section-title">Rooms & Suites</h2>
+                <p class="muted">Choose from thoughtfully designed spaces crafted for rest and inspiration.</p>
+                <div class="grid">
+                    <div class="card">
+                        <strong>City View King</strong>
+                        <ul>
+                            <li>Plush king bed</li>
+                            <li>Rainfall shower</li>
+                            <li>Dedicated workspace</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Garden Twin</strong>
+                        <ul>
+                            <li>Two twin beds</li>
+                            <li>Balcony seating</li>
+                            <li>Espresso station</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Ocean Suite</strong>
+                        <ul>
+                            <li>Separate lounge</li>
+                            <li>Panoramic sea view</li>
+                            <li>Soaking tub</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <strong>Family Deluxe</strong>
+                        <ul>
+                            <li>Two-bedroom layout</li>
+                            <li>Kid-friendly amenities</li>
+                            <li>Kitchenette</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dining" class="sections">
+            <div class="panel">
+                <h2 class="section-title">Dining & Menu Highlights</h2>
+                <p class="muted">From sunrise breakfasts to late‑night bites, our rooftop kitchen serves seasonal plates made with local produce.</p>
+                <div class="grid">
+                    <div class="card"><strong>Azure Breakfast</strong><br><span class="muted">Farm eggs, grilled sourdough, heirloom tomatoes</span></div>
+                    <div class="card"><strong>Seared Sea Bass</strong><br><span class="muted">Lemon caper butter, charred greens</span></div>
+                    <div class="card"><strong>Wild Mushroom Risotto</strong><br><span class="muted">Truffle oil, parmesan</span></div>
+                    <div class="card"><strong>Signature Mocktail</strong><br><span class="muted">Citrus basil spritz</span></div>
+                </div>
+            </div>
+        </section>
+        <section id="amenities" class="sections">
+            <div class="panel">
+                <h2 class="section-title">Amenities</h2>
+                <div class="grid">
+                    <div class="card">Rooftop terrace with coastal views</div>
+                    <div class="card">High‑speed Wi‑Fi throughout the property</div>
+                    <div class="card">24/7 concierge and contactless check‑in</div>
+                    <div class="card">In‑room espresso and curated mini‑bar</div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="sections">
+            <div class="panel">
+                <h2 class="section-title">Contact & Location</h2>
+                <p>123 Seabreeze Lane, Coastal City 40001</p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a> · Email: <a href="mailto:stay@azurevista.example">stay@azurevista.example</a></p>
+                <div class="cta" style="margin-top:8px;">
+                    <a class="btn btn-primary" href="#home">Back to Top</a>
+                    <a class="btn btn-ghost" href="#rooms">Check Availability</a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2025 Hotel Azure Vista. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
